@@ -1,0 +1,11 @@
+---
+description: Prohibido commit y push — el usuario es el único autor Git
+alwaysApply: true
+---
+
+# Git: solo el usuario hace commits
+
+- **Nunca** ejecutes `git commit`, `git push`, `git commit --amend`, ni configures co-autoría.
+- El usuario no quiere que la IA aparezca como co-autora en GitHub.
+- Puedes editar código, instalar deps y sugerir el mensaje de commit en texto.
+- Si te piden commitear o pushear, rechaza y remite a `MEMORIA.md`.
