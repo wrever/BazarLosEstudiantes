@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Boxes,
   ClipboardList,
   LayoutDashboard,
   LogOut,
@@ -12,6 +11,7 @@ import {
   Warehouse,
 } from "lucide-react";
 import { signOut } from "next-auth/react";
+import { BrandLogo } from "@/components/BrandLogo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -27,17 +27,14 @@ export function AdminNav() {
   const pathname = usePathname();
 
   return (
-    <aside className="flex flex-col bg-sidebar text-sidebar-foreground md:min-h-screen md:w-60 md:shrink-0">
-      <div className="flex items-center gap-2 border-b border-sidebar-border px-4 py-5">
-        <span className="flex size-9 items-center justify-center rounded-xl bg-sidebar-primary text-sidebar-primary-foreground">
-          <Boxes className="size-4" />
-        </span>
-        <div>
-          <p className="font-[family-name:var(--font-display)] text-base font-semibold leading-tight">
-            Panel Bazar
-          </p>
-          <p className="text-xs text-sidebar-foreground/60">Administración</p>
-        </div>
+    <aside className="flex flex-col bg-sidebar text-sidebar-foreground md:min-h-screen md:w-64 md:shrink-0">
+      <div className="border-b border-sidebar-border bg-white px-4 py-4">
+        <Link href="/" className="block">
+          <BrandLogo height={42} />
+        </Link>
+        <p className="mt-2 text-xs font-medium text-[#0b1f24]/55">
+          Panel de administración
+        </p>
       </div>
 
       <nav className="flex flex-1 flex-row gap-1 overflow-x-auto p-3 md:flex-col">

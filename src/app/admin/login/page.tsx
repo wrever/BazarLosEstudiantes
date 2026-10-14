@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
-import { Store } from "lucide-react";
+import { BrandLogo } from "@/components/BrandLogo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -51,9 +51,9 @@ export default function AdminLoginPage() {
     <div className="relative flex min-h-screen items-center justify-center px-4 py-10">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#c8ebe3_0%,_transparent_55%)]" />
       <Card className="relative w-full max-w-md animate-rise rounded-3xl border-border/70 shadow-lg">
-        <CardHeader className="space-y-3 text-center">
-          <div className="mx-auto flex size-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-            <Store className="size-5" />
+        <CardHeader className="space-y-4 text-center">
+          <div className="mx-auto">
+            <BrandLogo height={52} priority />
           </div>
           <CardTitle className="font-[family-name:var(--font-display)] text-2xl">
             Ingresar al panel

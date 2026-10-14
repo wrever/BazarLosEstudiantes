@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MapPin, Clock, MessageCircle } from "lucide-react";
 import type { BusinessInfo } from "@prisma/client";
+import { BrandLogo } from "@/components/BrandLogo";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
@@ -11,7 +12,8 @@ export function SiteFooter({ info }: { info: BusinessInfo | null }) {
     <footer className="mt-8 border-t border-border/70 bg-card/60">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-[1.4fr_1fr] md:px-6">
         <div className="animate-fade">
-          <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold">
+          <BrandLogo height={48} className="mb-4" />
+          <h2 className="sr-only">
             {info?.name ?? "Bazar Los Estudiantes"}
           </h2>
           <p className="mt-2 max-w-md text-muted-foreground">

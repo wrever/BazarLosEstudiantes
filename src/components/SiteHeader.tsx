@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Store } from "lucide-react";
+import { Menu } from "lucide-react";
+import { BrandLogo } from "@/components/BrandLogo";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -22,20 +23,10 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-4 md:px-6">
-        <Link href="/" className="group flex items-center gap-2.5">
-          <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm transition-transform group-hover:scale-105">
-            <Store className="size-4" />
-          </span>
-          <span className="leading-tight">
-            <span className="block font-[family-name:var(--font-display)] text-lg font-semibold tracking-tight">
-              Bazar Los Estudiantes
-            </span>
-            <span className="hidden text-xs text-muted-foreground sm:block">
-              Apoquindo · Las Condes
-            </span>
-          </span>
+    <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur-xl">
+      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-4 md:h-[4.25rem] md:px-6">
+        <Link href="/" className="shrink-0 transition-opacity hover:opacity-90">
+          <BrandLogo height={46} priority className="max-h-10 md:max-h-12" />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -67,9 +58,8 @@ export function SiteHeader() {
           </SheetTrigger>
           <SheetContent side="right" className="w-[280px]">
             <SheetHeader>
-              <SheetTitle className="font-[family-name:var(--font-display)] text-left">
-                Menú
-              </SheetTitle>
+              <SheetTitle className="sr-only">Menú</SheetTitle>
+              <BrandLogo height={40} />
             </SheetHeader>
             <div className="mt-6 flex flex-col gap-2">
               {links.map((link) => (

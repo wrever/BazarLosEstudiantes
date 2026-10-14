@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   description:
     "Catálogo digital e inventario del Bazar Los Estudiantes en Apoquindo, Las Condes.",
+  icons: {
+    icon: "/img/logo-bazar-los-estudiantes.png",
+    apple: "/img/logo-bazar-los-estudiantes.png",
+  },
 };
 
 export default function RootLayout({
